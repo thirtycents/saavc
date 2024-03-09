@@ -16,7 +16,7 @@ The solution should be used whenever there is a need to securely manage, share, 
 ## Where should the solution be used
 it can be used globally across different countries and healthcare systems. 
 
-System Design.
+## System Design.
 ### Registration Process:
 
 1. Connect Wallet: Users connect their MetaMask wallet by clicking the "Connect Wallet" button.
