@@ -1,51 +1,23 @@
-## What the project is about 
-The project is designed to securely manage and verify vaccination records through a decentralized platform. It utilizes blockchain technology to create verifiable claims related to vaccination information, which are then stored and managed using a combination of IPFS for data storage and Ethereum smart contracts for data integrity and verification.
+**What the Project is About**
 
-## Why we are doing it
-The initiative aims to address issues related to the traditional management of vaccination records, such as data fragmentation, lack of trust, and accessibility challenges. By leveraging blockchain, the project ensures that vaccination records are immutable, secure, and easily verifiable, thereby improving trust and interoperability across different healthcare systems and stakeholders.
+This project aims to develop a decentralized identity verification and verifiable credentials system (VeriChainID) based on blockchain technology. 
 
-## How to do part it
- Implementing the project involves several key technologies and steps, such as using web3.js to interact with Ethereum blockchain, Solidity for smart contracts, and IPFS API for data storage. Key processes include creating DID documents, uploading them to IPFS, binding them with user wallet addresses in smart contracts, and developing a secure method for issuing and verifying vaccination verifiable claims.
+**Why We Are Doing It**
 
-## Who is the solution intended for 
-The solution is intended for a wide range of stakeholders within the healthcare ecosystem, including individuals who wish to manage and verify their vaccination status, healthcare providers, vaccination companies, and government or regulatory bodies that require reliable and secure access to vaccination records.
+With the advent of the digital age, there is an increasing need for a secure, reliable, and convenient method of identity verification for individuals and institutions. Traditional identity verification systems, relying on centralized management, are prone to data breaches and identity theft. This project offers a decentralized approach, giving users full control over their identity data, thereby improving security and privacy protection.
 
-## When should the solution be used
-The solution should be used whenever there is a need to securely manage, share, or verify vaccination information. This includes situations such as international travel, school enrollments, access to public events, or any scenario where proof of vaccination is required.
+**How to Do Part It**
 
-## Where should the solution be used
-it can be used globally across different countries and healthcare systems. 
+The project integrates blockchain technology, proxy re-encryption, and smart contracts to achieve decentralized identity authentication and data management. Users can create and manage their digital identities (DIDs) on the platform and generate verifiable credentials (VCs), which third parties can verify under user authorization without direct access to sensitive information.
 
-## System Design.
-### Registration Process:
+**Who Is the Solution Intended For**
 
-1. Connect Wallet: Users connect their MetaMask wallet by clicking the "Connect Wallet" button.
-2. Fill Registration Information: Users fill in the necessary information (such as email, name, etc.), which will be used to create a DID document.
-3. Create DID Document and Upload to IPFS: The backend service receives the registration information, generates a DID document, and uploads it to IPFS, returning a CID.
-4. Store CID in Smart Contract: Using the user's wallet address, the smart contract is called to bind the CID with the user's wallet address. This step is initiated by the user's wallet, and the user pays the gas fee.
+The solution targets individuals and institutions requiring digital identity verification, including but not limited to financial services, educational certifications, healthcare, and government services.
 
-### Login Process:
+**When Should the Solution Be Used**
 
-1. Connect Wallet: Users click the "Connect Wallet" button on the login interface to connect their MetaMask wallet.
-2. Wallet Address as Identity Credential: The application verifies the user's identity using the connected wallet address. This can be done by sending a signature request to the user's wallet, and once the user signs it, the backend verifies the signature to confirm the user's identity.
-3. Access Authorization: Once the wallet address (user identity) is verified, the user is granted permission to log in and use the application.
+The solution is applicable in any scenario requiring secure identity verification, data sharing, and privacy protection, especially during significant transactions, accessing sensitive information, or executing legal documents.
 
+**Where Should the Solution Be Used**
 
-
-
-
-###  Create and Issue Verifiable Claims
-
-After the user receives a vaccine at the vaccination company, a verifiable claim is generated by the vaccination company or healthcare institution:
-
-- The vaccine administration proof is signed using the private key of the vaccination company or healthcare institution.
-- The signed claim and its metadata, such as issuance date and expiration date, are packaged together to create a complete verifiable claim document.
-- This document is uploaded to IPFS, and the returned CID is recorded.
-
-Binding the verifiable claim to the user's DID.
-
-### Verifying a Verifiable Claim
-
-- When there is a need to verify the user's vaccination status (e.g., for travel or event entry requirements), the user provides their DID.
-- The relevant institution uses this DID to query the smart contract and obtain the stored CIDs of the vaccination information.
-- The CIDs are used to retrieve the verifiable claim documents from IPFS, and then the signatures in the documents are verified to confirm the authenticity of the information.
+The solution can be used anywhere around the globe, particularly suitable for scenarios requiring cross-border verification or inter-institutional collaboration.
